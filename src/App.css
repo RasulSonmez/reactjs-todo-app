@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+    font-family: 'Roboto', sans-serif  !important; 
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .form{
+      display: flex;
+      align-items: center;
+      justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .form input{
+      width: 100%;
+      height: 40px;
+      border-radius: 5px;
+      padding: 0 40px 0 75px;
+      font-size: 18px;
+      border: 1px solid #454564;
+      color: #454564;
+      transition: 300ms border-color ease-in-out;    
   }
+
+  .form input:focus{
+      outline: none;
+  }
+
+  .form button{
+      height: 60px;
+      background-color: transparent;
+      border: none;
+      font-size: 20px;
+      transition: 300ms all;
+  }
+
+  .form button:hover{
+      color: #9a9ae1;
+  }
+  .category-selection select{
+    width: 50%;
+    height: 40px;
+    border-radius: 5px;
+    padding: 0 40px 0 75px;
+    font-size: 18px;
+    border: 1px solid #454564;
+    color: #454564;
+    transition: 300ms border-color ease-in-out; 
+  }
+
+  .todo-select{
+      background-color: #bee4e942;
+      border-radius: .4rem;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      padding: 1rem 0 1rem 1rem;
+  }
+
+.todo-category{
+    background-color: #eeee;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 2rem 3rem 2rem 3rem;
+    border-radius: .4rem;
+}
+
+.category-title{
+    color:#673AB7;
+}
+
+
+.todo-button-check{
+    border: none;
+    font-size: 20px;
+    background: transparent;
+    color: #4caf50;
+}
+
+.todo-button-del{
+    border: none;
+    font-size: 20px;
+    background: transparent;
+    color: #E91E63;
+}
+
+.todo-item-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

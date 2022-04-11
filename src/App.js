@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+// Components
+import TodoInput from "./components/TodoInput";
+import TodoList from "./components/TodoList";
+
+// Context
+import { TodoProvider } from "./context/TodoContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TodoProvider>
+      <div className="container mt-5">
+        <div className="text-center text-light fw-bold">
+          <h1>Todo List With Categories</h1>
+          <p>Enter your input and select your categoru</p>
+        </div>
+        <TodoInput />
+        <TodoList />
+      </div>
+    </TodoProvider>
   );
 }
 
