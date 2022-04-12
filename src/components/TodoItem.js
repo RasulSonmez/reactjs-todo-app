@@ -10,29 +10,31 @@ const TodoItem = ({ todo }) => {
   return (
     <div className="todo-item-content">
       <ul className={todo.completed ? "text-success" : null}>
-        <li>{todo.text}</li>
+        <li className="todo-item">
+          - {todo.text}{" "}
+          <div>
+            <button
+              className="todo-button-check"
+              onClick={() => {
+                const newTodo = { ...todo, completed: !todo.completed };
+                setTodos(
+                  todos.map((todo) => (todo.id === newTodo.id ? newTodo : todo))
+                );
+              }}
+            >
+              <FiCheck />
+            </button>
+            <button
+              className="todo-button-del"
+              onClick={() => {
+                removeTodo(todo.id);
+              }}
+            >
+              <FiTrash2 />
+            </button>
+          </div>
+        </li>
       </ul>
-      <div className="todo-button">
-        <button
-          className="todo-button-check"
-          onClick={() => {
-            const newTodo = { ...todo, completed: !todo.completed };
-            setTodos(
-              todos.map((todo) => (todo.id === newTodo.id ? newTodo : todo))
-            );
-          }}
-        >
-          <FiCheck />
-        </button>
-        <button
-          className="todo-button-del"
-          onClick={() => {
-            removeTodo(todo.id);
-          }}
-        >
-          <FiTrash2 />
-        </button>
-      </div>
     </div>
   );
 };
