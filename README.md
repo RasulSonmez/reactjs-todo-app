@@ -1,6 +1,6 @@
 # Live Website
 
-[Live Website](https://reactjs-todo-app-practice.netlify.app/).
+[Live Website](https://reactjs-todo-app-practice.netlify.app/)
 
 # Getting Started with Create React App
 
